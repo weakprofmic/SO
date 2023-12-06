@@ -1,0 +1,89 @@
+package lab_5.utils;
+
+import java.lang.reflect.Method;
+import java.util.Scanner;
+
+public class SolutionUtils {
+  static Number[][] arrOfArrs = new Number[][]{new Number[]{1,2,3,4,5}, new Number[]{7,8,10,14,15}, new Number[]{1,2,7,19,25}};
+  static Number[] arr = new Number[]{5,4,3,2,1};
+  static int k = 3;
+  static Object[] ACTIVE_ARGS;
+
+
+  public static Object[] getParams(Method method, boolean shouldRead) {
+    Class[] parameters = method.getParameterTypes();
+
+    /* for (Class parameter : parameters) {
+       System.out.print(parameter.getTypeName() + ", ");
+    }
+
+    System.out.println(); */
+
+    if(shouldRead)
+      readParams(parameters);
+    setParams(parameters);
+
+    /* for (Object arg : ACTIVE_ARGS) {
+      System.out.println(arg);
+    } */
+    return ACTIVE_ARGS;
+  }
+
+  public static void readParams(Class[] parameters) {
+    for (Class parameter : parameters) {
+      switch(parameter.getTypeName()) {
+        case "int": case "java.lang.Integer": {System.out.println("What is k?"); k = readInt(); break;}
+        case "int[]": case "java.lang.Integer[]": case "java.lang.Number[]": {arr = readArray(); break;}
+        case "int[][]": case "java.lang.Integer[][]": case "java.lang.Number[][]": {arrOfArrs = readMatrix(); break;}
+        default: System.out.println("Unknown parameter type: " + parameter.getTypeName());
+      }
+    }
+  }
+
+  public static void setParams(Class[] parameters) {
+    ACTIVE_ARGS = new Object[parameters.length];
+    int i = 0;
+    
+    for (Class parameter : parameters) {
+       switch(parameter.getTypeName()) {
+        case "int": case "java.lang.Integer": ACTIVE_ARGS[i++]= k; break;
+        case "int[]": case "java.lang.Integer[]": case "java.lang.Number[]":  ACTIVE_ARGS[i++]= arr; break;
+        case "int[][]": case "java.lang.Integer[][]": case "java.lang.Number[][]":  ACTIVE_ARGS[i++]= arrOfArrs; break;
+       default: System.out.println("Unknown parameter type: " + parameter.getTypeName());
+      }
+    }
+  }
+
+  static Integer readInt() {
+    Scanner in = new Scanner(System.in);
+    k = 0;
+    try{
+      k = in.nextInt();
+    } catch(Exception e) {}
+
+    return k;
+  }
+
+  static Number[] readArray() {
+    System.out.println("How many elements?");
+    int n = 0;
+    n = readInt();
+    Number[] elements = new Number[n];
+    
+    for (int i = 0; i < n; ++i) {
+        elements[i] = (Number)readInt();
+    }
+    return elements;
+  }
+
+  static Number[][] readMatrix() {
+    System.out.println("How many lines?");
+    int n = 0;
+    n = readInt();
+    Number[][] lines = new Number[n][];
+    for (int i = 0; i < n; ++i) {
+        lines[i++] = (Number[])readArray();
+    }
+    return lines;
+  }
+}

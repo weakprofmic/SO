@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project name="LAB_5" default="test">
+
+   <target name="test">
+       <echo>First build in Ant!</echo>
+   </target>
+   <target name="compile">
+       <mkdir dir="bin"/>
+       <javac destdir="bin" includeantruntime="false" target="11" source="11">
+	   <!-- executable="D:/Langs/_Java_/java-11-hotpot/bin/javac" source="11" target="11"> -->
+           <src path="src/main/java"/>
+       </javac>
+	   <copy todir="./bin/descriptions">
+		  <fileset dir="./src/main/res/descriptions"/>
+	   </copy>
+   </target>
+   <target name="run" depends="compile">
+       <java classname="lab_5.Main" classpath="bin">
+	   <arg value="-Djava.security.manager=allow"/>
+		</java>
+   </target>
+   <target name="clean">
+       <delete dir="bin"/>
+	   <mkdir dir="bin"/>
+   </target>
+</project>
