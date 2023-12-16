@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" mouseTransparent="false" spacing="30" styleClass="document" stylesheets="@../css/startStyles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utm.so.individual.controllers.startController">
+     <!-- <Label fx:id="lbl_1" text="Triathlon App" textAlignment="RIGHT">
+         <font>
+             <Font size="20.0" />
+         </font>
+     </Label>
+     <Label fx:id="lbl_2" text="This is a simple demo application." textAlignment="RIGHT" /> -->
+    <VBox alignment="CENTER">
+      <Label alignment="CENTER" styleClass="header">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="50.0" top="50.0" />
+         </VBox.margin>
+         <graphic>
+            <Text stroke="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header" text="Start Menu" />
+         </graphic>
+      </Label>
+      <VBox alignment="CENTER" styleClass="menuLinks">
+         <children>
+            <Label onMouseClicked="#toRace" text="TO RACE" />
+            <Separator prefWidth="500.0" />
+            <Label onMouseClicked="#toSetup" text="TO SETTINGS" />
+            <Separator prefWidth="500.0" />
+         </children>
+      </VBox>
+      <padding>
+         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+      </padding>
+    </VBox>
+    <!-- <Button fx:id="btn_1" contentDisplay="CENTER" graphicTextGap="10.0" lineSpacing="10.0" onAction="#btnClick" text="Click to start!">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button> -->
+    <opaqueInsets>
+        <Insets top="10.0" />
+    </opaqueInsets>
+</VBox>

@@ -1,0 +1,69 @@
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Italic.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+.label, .button {
+  -fx-font-family: 'Philosopher';
+}
+
+
+.header>Text {
+  -fx-font-size: 48px;
+  -fx-font-weight: bold;
+  -fx-fill: rgb(255, 255, 255)!important;
+}
+
+.button {
+  -fx-padding: 10px 15px;
+  -fx-font-size: 24px;
+  -fx-transtion: all .7s ease;
+  -fx-background-radius: 10;
+  -fx-cursor: hand;
+}
+.navButton {
+  -fx-text-fill: white;
+  -fx-background-color: #FF8800;
+}
+.navButton:hover {
+  /* -fx-text-fill: red; */
+  -fx-background-color: #00FF88;
+  -fx-text-fill: rgb(0, 0, 0);
+}
+
+.pane {
+  -fx-background-color: #8800FF;
+}
+
+GridPane {
+  -fx-padding: 40px 10px;
+}
+GridPane > VBox {
+  
+}
+
+FlowPane {
+  -fx-alignment: center;
+  -fx-hgap: 50px;
+  -fx-column-halignment: center
+}
+
+FlowPane > VBox {
+  -fx-alignment: center;
+}

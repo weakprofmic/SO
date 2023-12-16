@@ -1,0 +1,68 @@
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Italic.ttf");
+  font-family: 'Philosopher';
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-BoldItalic.ttf");
+  font-family: 'Philosopher';
+  font-style: italic;
+  font-weight: bold;
+}
+
+.label {
+  -fx-font-family: 'Philosopher';
+}
+
+.document {
+  -fx-background-image: url("/img/questo.jpg");
+  -fx-background-size: cover;
+  -fx-background-position: center;
+  -fx-background-repeat: no-repeat;
+
+}
+
+.document>VBox {
+  -fx-background-color: #FF880099;
+  -fx-alignment: center;
+  -fx-fill-width: false;
+  /* -fx-padding: 40px 0; */
+  -fx-max-width: 500px;
+  -fx-border-radius: 50;
+  -fx-background-radius: 50;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+
+.menuLinks .label {
+  -fx-text-fill: white;
+  -fx-padding: 20px 0;
+  -fx-font-size: 36px;
+  -fx-transtion: all .4s ease;
+}
+
+
+.menuLinks .label:hover {
+  /* -fx-text-fill: red; */
+  -fx-font-weight: bolder;
+  -fx-cursor: hand;
+}
+
+.header>Text {
+  -fx-font-size: 48px;
+  -fx-font-weight: bold;
+  -fx-fill: rgb(255, 255, 255)!important;
+}

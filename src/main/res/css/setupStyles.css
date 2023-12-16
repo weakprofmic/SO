@@ -1,0 +1,123 @@
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-Italic.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("/fonts/philosopher/Philosopher-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+.label, .button {
+  -fx-font-family: 'Philosopher';
+}
+
+
+.header>Text {
+  -fx-font-size: 48px;
+  -fx-font-weight: bold;
+  -fx-fill: rgb(255, 255, 255) !important;
+}
+
+.button {
+  -fx-padding: 10px 15px;
+  -fx-font-size: 24px;
+  -fx-transtion: all .7s ease;
+  -fx-background-radius: 10;
+  -fx-cursor: hand;
+}
+
+.navButton {
+  -fx-text-fill: white;
+  -fx-background-color: #FF8800;
+}
+
+.navButton:hover {
+  /* -fx-text-fill: red; */
+  -fx-background-color: #00FF88;
+  -fx-text-fill: rgb(0, 0, 0);
+}
+
+.pane {
+  -fx-background-color: #8800FF;
+}
+
+GridPane {
+  -fx-padding: 40px 10px;
+}
+
+GridPane>VBox {}
+
+
+.accordion {
+  -fx-max-width: 800px;
+  -fx-background-color: #150026;
+  -fx-text-fill: white;
+}
+
+.accordion {
+  -fx-background-color: transparent;
+}
+.accordion .label {
+  -fx-font-size: 24px;
+}
+
+.accordion .text-field {
+  -fx-min-height: 50px;
+  -fx-min-width: 50px;
+  -fx-max-height: 50px;
+  -fx-max-width: 50px;
+  -fx-font-size: 20px;
+  -fx-alignment: center;
+}
+
+.accordion TitledPane .title {
+  -fx-background-color: #00FF88;
+  -fx-font-size: 22px;
+  -fx-background-insets: 0, 1, 2;
+  -fx-background-radius: 5;
+  -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em;
+  /* 2 10 3 10 */
+}
+
+.accordion TitledPane > *.content {
+  -fx-background-color: #FF8800;
+  -fx-text-fill: white;
+  -fx-background-radius: 5;
+  -fx-background-insets: 0, 1, 2;
+  -fx-border-color: transparent;
+  -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em;
+  /* 2 10 3 10 */
+}
+
+.paneAccord_item {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-background-radius: 5;
+}
+.paneAccord_item > VBox {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-background-radius: 5;
+
+}
+
+.list-view .list-cell {
+  -fx-background-color: #150026;
+  -fx-text-fill: white;
+  -fx-max-width: 800px;
+}
