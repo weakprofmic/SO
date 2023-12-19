@@ -35,7 +35,7 @@ public class App extends Application {
 
         stage = primaryStage;
         stage.getIcons().add(image);
-        stage.setTitle("Calc representation App");
+        stage.setTitle("Dinning philosophers App");
         stage.setWidth(1600);
         stage.setHeight(1000);
 
