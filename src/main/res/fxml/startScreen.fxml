@@ -28,7 +28,7 @@
       </Label>
       <VBox alignment="CENTER" styleClass="menuLinks">
          <children>
-            <Label onMouseClicked="#toRace" text="TO RACE" />
+            <Label onMouseClicked="#toRace" text="TO DINNER" />
             <Separator prefWidth="500.0" />
             <Label onMouseClicked="#toSetup" text="TO SETTINGS" />
             <Separator prefWidth="500.0" />

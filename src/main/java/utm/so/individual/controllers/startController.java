@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import utm.so.individual.App;
-import utm.so.individual.utility.Race;
 
 public class startController implements Initializable {
 

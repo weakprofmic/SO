@@ -67,3 +67,12 @@ FlowPane {
 FlowPane > VBox {
   -fx-alignment: center;
 }
+
+.labelTimeCell {
+  -fx-background-color: #00FF88;
+  -fx-font-size: 32px;
+  -fx-font-weight: bold;
+  -fx-pref-width: 50px;
+
+  -fx-text-fill: rgb(0, 0, 0);
+}
